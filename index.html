@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <link rel="stylesheet" href="index.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
@@ -8,30 +7,28 @@
 </head>
 
 <body>
-
     <div id="app">
         <v-app>
-            <v-toolbar app>
-                <v-toolbar-title>My Application</v-toolbar-title>
+            <v-toolbar>
+                <v-toolbar-title>Får den flyga med?</v-toolbar-title>
             </v-toolbar>
-            <v-navigation-drawer app></v-navigation-drawer>
             <v-content>
-                <v-container fluid>
-                    Hello Worldddd
-                    <v-btn color="info">Info</v-btn>
-
-                    <ol>
-                        <todo-item></todo-item>
-                    </ol>
+                <h2 class="headline">Vanliga mått</h2>
+                <v-container fluid grid-list-lg>
+                    <airline-groups :airlines="airlines"></airline-groups>
+                    <h2 class="headline">Filtrera på mått</h2>
+                    <airline-selector id="airline-selector" :allairlines="airlines" :measurement="measurement"
+                        @setselectedmeasurement="setselectedmeasurement"></airline-selector>
                 </v-container>
+                <h2 class="headline">Alla flygbolag</h2>
+                <airline-table :airlines="airlines" :headers="headers" :search="search" :settings="settings">
+                </airline-table>
             </v-content>
             <v-footer></v-footer>
         </v-app>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
     <script src="./src/index.js"></script>
 </body>
-
 </html>

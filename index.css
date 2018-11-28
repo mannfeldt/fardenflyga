@@ -2,3 +2,52 @@ html, body {
     margin: 5px;
     padding: 0;
 }
+
+.v-subheader {
+    justify-content: center;
+}
+
+.v-card__text {
+    padding: 0 !important;
+}
+
+.v-card__title {
+    justify-content: space-between !important;
+}
+
+.headline {
+    margin-top: 3em;
+}
+
+.v-slider>.v-slider__thumb-container:nth-child(2n+1)>.v-slider__thumb-label__container>.v-slider__thumb-label {
+    background-color: #4b8ccd !important;
+}
+
+.v-slider>.v-slider__thumb-container:nth-child(2n+0)>.v-slider__thumb-label__container>.v-slider__thumb-label {
+    background-color: #174ea7 !important;
+}
+
+svg {
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
+}
+
+svg path {
+    fill-opacity: 0;
+    stroke: #000;
+    stroke-width: 3;
+    stroke-dasharray: 870;
+    stroke-dashoffset: 870;
+    animation: draw 20s infinite ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
