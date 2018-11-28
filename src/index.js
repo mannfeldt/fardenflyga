@@ -379,6 +379,16 @@ let app = new Vue({
       <v-flex xs12 sm6>
       <div>
       <v-card-text>
+      <v-subheader class="pl-0">Vikt</v-subheader>
+      <v-range-slider
+        v-model="stateMeasurement.weight"
+        :max="maxWeight"
+        :min="minWeight"
+        v-on:change="updatemeasurement" 
+        thumb-label="always"
+      ></v-range-slider>
+      </v-card-text>
+      <v-card-text>
       <v-subheader class="pl-0">Höjd</v-subheader>
       <v-range-slider
         v-model="stateMeasurement.height"
@@ -408,16 +418,6 @@ let app = new Vue({
       thumb-label="always"
     ></v-range-slider>
   </v-card-text>
-    <v-card-text>
-    <v-subheader class="pl-0">Vikt</v-subheader>
-    <v-range-slider
-      v-model="stateMeasurement.weight"
-      :max="maxWeight"
-      :min="minWeight"
-      v-on:change="updatemeasurement" 
-      thumb-label="always"
-    ></v-range-slider>
-    </v-card-text>
     </div>
     </v-flex>
     <v-flex xs12 sm6>
