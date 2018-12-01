@@ -1,8 +1,8 @@
 {
     "name": "Får den flyga med?",
-    "short_name": "Får flyga2",
+    "short_name": "Får flyga3",
     "start_url": "/kandenflygamed",
-    "display": "browser",
+    "display": "fullscreen",
     "background_color": "#fff",
     "description": "En enkel app för att överskåda flybolagens olika regler för handbagage.",
     "icons": [{
