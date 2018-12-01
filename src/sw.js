@@ -7,7 +7,7 @@ if (workbox) {
 }
 //men sparas det till cachen automatiskt eller behöver jag sätta upp precaching?
 workbox.routing.registerRoute(
-    new RegExp('*\.'),
+    new RegExp('*\.html'),
     workbox.strategies.staleWhileRevalidate()
   );
   
