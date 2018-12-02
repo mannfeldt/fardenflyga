@@ -11,6 +11,10 @@ html, body {
     padding: 0 !important;
 }
 
+.v-toolbar__content {
+    justify-content: space-between;
+}
+
 .v-card__title {
     justify-content: space-between !important;
 }
